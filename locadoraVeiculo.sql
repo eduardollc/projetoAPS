@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `formaPagamento` ENUM('Pix', 'Dinheiro', 'Cartão') NOT NULL,
   `valor` DECIMAL NOT NULL,
-  `dataPagamento` DATE NOT NULL,
+  `dataPagamento` DATETIME NOT NULL,
   `status` ENUM('Aprovado', 'Recusado') NOT NULL,
   `comprovante` VARCHAR(100) NOT NULL,
   `notaFiscal` VARCHAR(100) NOT NULL,
