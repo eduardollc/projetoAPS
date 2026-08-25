@@ -10,4 +10,9 @@ package locadoraveiculo.model;
  */
 public class Cliente {
     
+    private String cnh;
+    private String telefone;
+    private String email;
+    private int situacaoFinanceira;
+    
 }

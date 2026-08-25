@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package locadoraveiculo.model;
 
 /**
@@ -9,5 +6,11 @@ package locadoraveiculo.model;
  * @author rentt
  */
 public class Cartao {
+    
+    private String numeroCartao;
+    private String nomeTitular;
+    private String dataValidade;
+    private String cvv;
+    
     
 }

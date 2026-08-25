@@ -10,4 +10,7 @@ package locadoraveiculo.model;
  */
 public class Funcionario {
     
+    private String matricula;
+    private String cargo;
+    
 }
