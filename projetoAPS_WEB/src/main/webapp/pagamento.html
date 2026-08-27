@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/styles3.css">
+    <title>Pagamento</title>
+</head>
+<body>
+    <main id="form_container">
+        <div id="form_header">
+            <h1 id="form_title">
+                Pagamento
+            </h1>
+        </div>
+        <form action="" method="post" id="form">
+            <div id="input_container">
+                <div class="input-box">
+                    <h3 id="form-h3">PIX</h3>
+                    <div id="img">
+                        <img src="./img/qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div id="chave" onclick="copiar()">
+                        <span id="pix">00020101021126360014br.gov.bcb.pix0114+55779986207025204000053039865802BR5919ANTONIO P P L SILVA6007BRUMADO62070503***6304CFE3</span>
+                        <i class="fa-regular fa-copy" id="pixIcon"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="formaPag" class="form-label">Selecione a Forma de Pagamento</label>
+                    <div id="payment">
+                        <select name="formaPag" id="payment-select">
+                            <option value="" disabled selected></option>
+                            <option value="cartao">Cartão</option>
+                            <option value="dinheiro">Dinheiro</option>
+                        </select>
+                </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-default">
+                <a id="a" href="">  
+                    Confirmar Pagamento
+                </a>
+            </button>
+        </form>
+    </main>
+</body>
+</html>
