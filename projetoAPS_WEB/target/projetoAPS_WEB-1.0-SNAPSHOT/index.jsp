@@ -14,7 +14,7 @@
                 Login
             </h1>
         </div>
-        <form action="login.jsp" id="form">
+        <form action="" id="form">
             <div id="input_container">
                 <div class="input-box">
                     <label for="email" class="form-label">Email</label>
