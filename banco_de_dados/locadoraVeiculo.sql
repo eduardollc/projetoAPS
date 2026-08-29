@@ -44,7 +44,6 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   
   -- Dados Cartão
   `numeroCartao` CHAR(16) NOT NULL,
-  `nomeTitular` VARCHAR(100) NOT NULL,
   `dataValidade` CHAR(4) NOT NULL,
   `cvv` CHAR(4) NOT NULL,
   
