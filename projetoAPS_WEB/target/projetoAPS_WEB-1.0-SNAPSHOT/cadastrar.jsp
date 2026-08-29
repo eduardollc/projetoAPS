@@ -14,7 +14,7 @@
                 Cadastrar
             </h1>
             <button class="btn-default" >
-                <a id="a" href="./index.html">
+                <a id="a" href="./index.jsp">
                     <i class="fa-solid fa-right-to-bracket"></i>
                 </a>
             </button>

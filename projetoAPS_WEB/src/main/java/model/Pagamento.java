@@ -12,6 +12,10 @@ public class Pagamento {
     private String comprovante;
     private String notaFiscal;
     
+    private String numeroCartao;
+    private String cvv;
+    private String dataValidade;
+    
     private Cliente cliente;
     private Funcionario funcionario;
     

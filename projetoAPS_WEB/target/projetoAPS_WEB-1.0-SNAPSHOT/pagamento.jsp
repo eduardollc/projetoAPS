@@ -33,7 +33,7 @@
                     <div id="payment">
                         <select name="formaPag" id="payment-select">
                             <option value="" disabled selected></option>
-                            <option value="cartao">CartÃ£o</option>
+                            <option value="cartao">Cartão</option>
                             <option value="dinheiro">Dinheiro</option>
                         </select>
                 </div>
