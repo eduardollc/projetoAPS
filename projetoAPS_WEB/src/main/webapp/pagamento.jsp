@@ -17,18 +17,6 @@
         <form action="" method="post" id="form">
             <div id="input_container">
                 <div class="input-box">
-                    <h3 id="form-h3">PIX</h3>
-                    <div id="img">
-                        <img src="./img/qrcode.png" alt="">
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div id="chave" onclick="copiar()">
-                        <span id="pix">00020101021126360014br.gov.bcb.pix0114+55779986207025204000053039865802BR5919ANTONIO P P L SILVA6007BRUMADO62070503***6304CFE3</span>
-                        <i class="fa-regular fa-copy" id="pixIcon"></i>
-                    </div>
-                </div>
-                <div class="input-box">
                     <div id="infocompra">
                         <div class="info-item">
                             <span class="info-label">ID da Compra</span>
@@ -45,6 +33,7 @@
                     <div id="payment">
                         <select name="formaPag" id="payment-select">
                             <option value="" disabled selected></option>
+                            <option value="pix">Pix</option>
                             <option value="cartao">Cartão</option>
                             <option value="dinheiro">Dinheiro</option>
                         </select>
@@ -59,12 +48,31 @@
         </form>
     </main>
     <div id="modal">
-        <div id="modal-cartao">
-            <div id="modal-header">
-                <h3 id="modal-title"><i class="fa-solid fa-credit-card"></i> Dados do Cartão</h3>
-                <i class="fa-solid fa-xmark" id="modal-close"></i>
+        <div class="modal-box" id="modal-pix">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-credit-card"></i> Pix</h3>
+                <i class="fa-solid fa-xmark modal-close"></i>
             </div>
-            <div id="modal-body">
+            <div class="modal-body">
+                <div class="input-box">
+                    <div id="img">
+                        <img src="./img/qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div id="chave">
+                        <span id="pix">00020101021126360014br.gov.bcb.pix0114+55779986207025204000053039865802BR5919ANTONIO P P L SILVA6007BRUMADO62070503***6304CFE3</span>
+                        <i class="fa-regular fa-copy" id="pixIcon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-box" id="modal-cartao">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-credit-card"></i> Dados do Cartão</h3>
+                <i class="fa-solid fa-xmark modal-close"></i>
+            </div>
+            <div class="modal-body">
                 <div class="input-box">
                     <label for="numeroCartao" class="form-label">Número do cartão</label>
                     <input type="text" id="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="19">
@@ -80,9 +88,21 @@
                     </div>
                 </div>
             </div>
-            <div id="modal-footer">
-                <button type="button" class="btn-secondary" id="modal-cancel">Cancelar</button>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary modal-cancel">Cancelar</button>
                 <button type="button" class="btn-default" id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+        <div class="modal-box" id="modal-dinheiro">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-money-bill-wave"></i> Dinheiro</h3>
+                <i class="fa-solid fa-xmark modal-close"></i>
+            </div>
+            <div class="modal-body">
+                <div id="aguardando">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>Aguardando confirmação do funcionário...</p>
+                </div>
             </div>
         </div>
     </div>

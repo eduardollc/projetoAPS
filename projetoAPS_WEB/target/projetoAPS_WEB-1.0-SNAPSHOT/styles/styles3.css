@@ -160,6 +160,38 @@ body{
     justify-content: center;
 }
 
+#payment{
+    display: flex;
+}
+
+#payment-select{
+    width: 100%;
+    padding: clamp(10px, 2vw, 16px);
+    font-size: clamp(14px, 1.5vw, 16px);
+    border-radius: 8px;
+    border: none;
+    background-color: #f6f8ff;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: #404044;
+}
+
+#payment-select:focus{
+    outline: 2px solid #6366f1;
+}
+
+.input-box:has(#payment){
+    border-top: 3px solid #e2e8f0;
+    padding-top: 24px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 #infocompra{
     display: flex;
     justify-content: space-between;
@@ -187,32 +219,6 @@ body{
     font-weight: 600;
 }
 
-#payment{
-    display: flex;
-}
-
-#payment-select{
-    width: 100%;
-    padding: clamp(10px, 2vw, 16px);
-    font-size: clamp(14px, 1.5vw, 16px);
-    border-radius: 8px;
-    border: none;
-    background-color: #f6f8ff;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    color: #404044;
-}
-
-#payment-select:focus{
-    outline: 2px solid #6366f1;
-}
-
-.input-box:has(#infocompra){
-    border-top: 3px solid #e2e8f0;
-    padding-top: 24px;
-}
-
 #modal{
     display: none;
     position: fixed;
@@ -230,25 +236,29 @@ body{
     display: flex;
 }
 
-#modal-cartao{
+.modal-box{
+    display: none;
     background-color: #f6f8ff;
     border-radius: 8px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     padding: 24px;
     width: 90%;
     max-width: 400px;
-    display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#modal-header{
+.modal-box.ativo{
+    display: flex;
+}
+
+.modal-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#modal-title{
+.modal-title{
     font-size: 18px;
     font-weight: 500;
     color: #1e293b;
@@ -257,17 +267,17 @@ body{
     gap: 8px;
 }
 
-#modal-close{
+.modal-close{
     cursor: pointer;
     color: #64748b;
     font-size: 18px;
 }
 
-#modal-close:hover{
+.modal-close:hover{
     color: #1e293b;
 }
 
-#modal-body{
+.modal-body{
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -278,7 +288,7 @@ body{
     gap: 12px;
 }
 
-#modal-body input{
+.modal-body input{
     width: 100%;
     padding: clamp(10px, 2vw, 14px);
     font-size: 14px;
@@ -290,16 +300,16 @@ body{
     color: #404044;
 }
 
-#modal-body input:focus{
+.modal-body input:focus{
     outline: 2px solid #6366f1;
 }
 
-#modal-footer{
+.modal-footer{
     display: flex;
     gap: 12px;
 }
 
-#modal-footer button{
+.modal-footer button{
     flex: 1;
     padding: 10px;
     border-radius: 8px;
@@ -317,4 +327,17 @@ body{
 
 .btn-secondary:hover{
     background-color: #cbd5e1;
+}
+
+/* estilo pra mensagem do modal de dinheiro */
+#aguardando{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fef9c3;
+    border-radius: 8px;
+    padding: 16px;
+    color: #854d0e;
+    font-size: 14px;
+    font-weight: 500;
 }
