@@ -9,32 +9,34 @@ import service.ConnectionBD;
 
 public class UsuarioDAO {
     
-    public Usuario buscarPorEmailSenha(String email, String senha)throws SQLException {
-        
-         
-        String sql = "SELECT id, nome, email, senha FROM usuario WHERE email = ? AND senha = ?";
+    // valida login e senha; retorna true se bater, false caso contrário
+    public boolean verificarLogin(String login, String senha) throws SQLException {
+        String sql = "SELECT login FROM usuario WHERE login = ? AND senha = ?";
 
-        // try-with-resources: garante que a conexão e o statement são fechados automaticamente
         try (Connection conn = ConnectionBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, email); // substitui o primeiro "?" pelo email recebido
-            stmt.setString(2, senha); // substitui o segundo "?" pela senha recebida
+            stmt.setString(1, login);
+            stmt.setString(2, senha);
 
-            try (ResultSet rs = stmt.executeQuery()) { // executa o SELECT e recebe o resultado
-                if (rs.next()) { // se encontrou uma linha, o login é válido
-                    // monta o objeto Usuario com os dados vindos do banco
-                    return new Usuario(
-                        rs.getString("login"),
-                        rs.getString("nome"),
-                        rs.getString("email"),
-                        rs.getString("senha")
-                    );
-                }
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
             }
         }
-        return null; // se não encontrou nada, retorna null (login inválido)
-        
     }
-    
+
+    public void inserir(Usuario usuario, Connection conn) throws SQLException {
+        String sql = "INSERT INTO usuario (login, senha, nome, cpf) VALUES (?, ?, ?, ?)";
+
+        // aqui NÃO usamos try-with-resources na Connection, porque ela não é nossa —
+        // quem abriu foi o DAO que chamou este método, e é ele quem deve fechá-la
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, usuario.getLogin());
+            stmt.setString(2, usuario.getSenha());
+            stmt.setString(3, usuario.getNome());
+            stmt.setString(4, usuario.getCpf());
+            stmt.executeUpdate();
+        }
+    }
+     
 }
