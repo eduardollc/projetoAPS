@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +29,18 @@
                     </div>
                 </div>
                 <div class="input-box">
+                    <div id="infocompra">
+                        <div class="info-item">
+                            <span class="info-label">ID da Compra</span>
+                            <span class="info-valor" id="idCompra">#000123</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Valor</span>
+                            <span class="info-valor" id="valorCompra">R$ 150,00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
                     <label for="formaPag" class="form-label">Selecione a Forma de Pagamento</label>
                     <div id="payment">
                         <select name="formaPag" id="payment-select">
@@ -46,5 +58,34 @@
             </button>
         </form>
     </main>
+    <div id="modal">
+        <div id="modal-cartao">
+            <div id="modal-header">
+                <h3 id="modal-title"><i class="fa-solid fa-credit-card"></i> Dados do Cartão</h3>
+                <i class="fa-solid fa-xmark" id="modal-close"></i>
+            </div>
+            <div id="modal-body">
+                <div class="input-box">
+                    <label for="numeroCartao" class="form-label">Número do cartão</label>
+                    <input type="text" id="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+                <div id="modal-row">
+                    <div class="input-box">
+                        <label for="validadeCartao" class="form-label">Validade</label>
+                        <input type="text" id="validadeCartao" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="input-box">
+                        <label for="cvvCartao" class="form-label">CVV</label>
+                        <input type="text" id="cvvCartao" placeholder="000" maxlength="4">
+                    </div>
+                </div>
+            </div>
+            <div id="modal-footer">
+                <button type="button" class="btn-secondary" id="modal-cancel">Cancelar</button>
+                <button type="button" class="btn-default" id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./javaScript/script2.js"></script>
 </body>
 </html>
