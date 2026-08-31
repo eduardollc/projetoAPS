@@ -1,0 +1,12 @@
+model\Funcionario.class
+com\mycompany\projetoaps_web\resources\JakartaEE11Resource.class
+model\Usuario.class
+model\Pagamento$FormaPagamento.class
+model\Pagamento$Status.class
+controller\UsuarioController.class
+model\Cliente.class
+com\mycompany\projetoaps_web\JakartaRestConfiguration.class
+dao\ClienteDAO.class
+dao\UsuarioDAO.class
+model\Pagamento.class
+service\ConnectionBD.class
