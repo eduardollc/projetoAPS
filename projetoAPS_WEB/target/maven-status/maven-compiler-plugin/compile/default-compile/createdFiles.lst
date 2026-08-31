@@ -1,5 +1,6 @@
 model\Pagamento$Status.class
 model\Funcionario.class
+controller\UsuarioController.class
 model\Cliente.class
 com\mycompany\projetoaps_web\JakartaRestConfiguration.class
 dao\UsuarioDAO.class

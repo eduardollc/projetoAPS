@@ -9,6 +9,9 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
   `cpf` CHAR(11) NOT NULL,
   PRIMARY KEY (`login`));
 
+INSERT INTO usuario (login, senha, nome, cpf)
+VALUES ('teste', '123456', 'Usuário Teste', '12345678900');
+
 CREATE TABLE IF NOT EXISTS `Cliente` (
   `cnh` CHAR(11) NOT NULL,
   `telefone` CHAR(11) NOT NULL,
@@ -41,13 +44,9 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   `notaFiscal` VARCHAR(100) NOT NULL,
   `codCliente` CHAR(11) NOT NULL,
   `codFuncionario` CHAR(8) NOT NULL,
-  
-  -- Dados Cartão
   `numeroCartao` CHAR(16) NOT NULL,
   `dataValidade` CHAR(4) NOT NULL,
   `cvv` CHAR(4) NOT NULL,
-  
-  -- Chaves Primarias e Estrangeiras
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_Pagamento_Cliente1`
   FOREIGN KEY (`codCliente`)

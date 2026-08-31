@@ -14,29 +14,25 @@
                 Login
             </h1>
         </div>
-        <form action="" id="form">
+        <form action="UsuarioController" method="post" id="form">
             <div id="input_container">
                 <div class="input-box">
                     <label for="email" class="form-label">Email</label>
                     <div class="input-field">
-                        <input type="text" id="email" name="email" class="form-control" placeholder="exemplo@gmail.com" maxlength="100">
+                        <input type="text" id="email" name="login" class="form-control" placeholder="exemplo@gmail.com" maxlength="100">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                 </div>
                 <div class="input-box">
                     <label for="password" class="form-label">Senha</label>
                     <div class="input-field">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="********" maxlength="12">
+                        <input type="password" id="password" name="senha" class="form-control" placeholder="********" maxlength="12">
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 </div>
                 <div class="radio-container"></div>
             </div>
-            <button type="submit" class="btn-default">
-                <a id="a" href="./pagamento.jsp">
-                    Logar
-                </a>
-            </button>
+            <button type="submit" class="btn-default">Logar</button>
             <button type="submit" class="btn-default">
                 <a id="a" href="./cadastrar.jsp">  
                     Cadastrar

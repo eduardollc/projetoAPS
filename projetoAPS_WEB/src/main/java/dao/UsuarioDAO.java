@@ -11,7 +11,7 @@ public class UsuarioDAO {
     
     // valida login e senha; retorna true se bater, false caso contrário
     public Usuario verificarLogin(String login, String senha) throws SQLException {
-        String sql = "SELECT login FROM usuario WHERE login = ? AND senha = ?";
+        String sql = "SELECT login, senha FROM usuario WHERE login = ? AND senha = ?";
 
         try (Connection conn = ConnectionBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
