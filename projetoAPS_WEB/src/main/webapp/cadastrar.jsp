@@ -79,13 +79,11 @@
             </button>
         </form>
     </main>
-    <script src="./javaScript/script.js"></script>
-    
-  <% if (request.getAttribute("erro") != null) { %>
-        <script>
-            alert("<%= request.getAttribute("erro") %>");
-        </script>
+    <% if (request.getAttribute("erro") != null) { %>
+    <script>
+        alert("<%= request.getAttribute("erro") %>");
+    </script>
     <% } %>
-    
+    <script src="./javaScript/script.js"></script>
 </body>
 </html>

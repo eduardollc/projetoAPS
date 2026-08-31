@@ -39,5 +39,10 @@
                     Cadastrar
                 </a>
     </main>
+    <% if (request.getAttribute("erro") != null) { %>
+    <script>
+        alert("<%= request.getAttribute("erro") %>");
+    </script>
+    <% } %>
 </body>
 </html>
