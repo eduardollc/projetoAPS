@@ -54,3 +54,16 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   CONSTRAINT `fk_Pagamento_Funcionario1`
   FOREIGN KEY (`codFuncionario`)
   REFERENCES `Funcionario` (`login`));
+  
+  select * from usuario;
+  
+  -- pra testar como CLIENTE
+INSERT INTO cliente (cnh, telefone, email, situacaoFinanceira, login)
+VALUES ('12345678901', '77999998888', 'teste@email.com', 1, 'teste');
+
+-- ou, pra testar como FUNCIONARIO, crie outro usuário base primeiro
+INSERT INTO usuario (login, senha, nome, cpf)
+VALUES ('func1', '123456', 'Funcionário Teste', '98765432100');
+
+INSERT INTO funcionario (matricula, cargo, login)
+VALUES ('F0000001', 'Atendente', 'func1');
