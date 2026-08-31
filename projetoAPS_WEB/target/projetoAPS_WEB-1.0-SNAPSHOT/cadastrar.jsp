@@ -20,7 +20,7 @@
             </button>
         </div>
 
-        <form method="post" action="" id="form">
+        <form method="post" action="CadastroController" id="form">
             <div id="input_container">
                 <div class="input-box">
                     <label for="name" class="form-label">Nome</label>

@@ -1,4 +1,6 @@
+dao\FuncionarioDAO.class
 model\Funcionario.class
+controller\CadastroController.class
 com\mycompany\projetoaps_web\resources\JakartaEE11Resource.class
 model\Usuario.class
 model\Pagamento$FormaPagamento.class
