@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
-//registra essa classe como um Servlet
+//registra essa classe com um Servlet
 @WebServlet("/UsuarioController")
 public class UsuarioController extends HttpServlet{
     
