@@ -33,12 +33,11 @@
                 <div class="radio-container"></div>
             </div>
             <button type="submit" class="btn-default">Logar</button>
-            <button type="submit" class="btn-default">
-                <a id="a" href="./cadastrar.jsp">  
+            
+        </form>
+        <a id="a" href="./cadastrar.jsp" class="btn-default">  
                     Cadastrar
                 </a>
-            </button>
-        </form>
     </main>
 </body>
 </html>
