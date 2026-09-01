@@ -26,6 +26,7 @@ public class Pagamento {
 }
     
     public enum Status {
+    PENDENTE,
     APROVADO,
     RECUSADO
    

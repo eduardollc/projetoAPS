@@ -24,7 +24,14 @@ public class PagamentoController extends HttpServlet{
         p.setFormaPagamento(Pagamento.FormaPagamento.valueOf(formaPagStr.toUpperCase()));
         p.setValor(valor);
         p.setDataPagamento(LocalDateTime.now());
-        p.setStatus(Pagamento.Status.APROVADO); // simplificando, pode mudar depois
+        
+        // status depende da forma de pagamento
+        if (formaPagStr.equalsIgnoreCase("dinheiro")) {
+            p.setStatus(Pagamento.Status.PENDENTE);
+        } else {
+            p.setStatus(Pagamento.Status.APROVADO); // simplificando, pode mudar depois
+        }
+        
         p.setComprovante("pendente");
         p.setNotaFiscal("pendente");
         p.setCliente(cliente);

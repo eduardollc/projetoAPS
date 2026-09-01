@@ -19,7 +19,7 @@ public class PagamentoDAO {
             stmt.setString(1, formatarEnumBanco(p.getFormaPagamento()));
             stmt.setDouble(2, p.getValor());
             stmt.setTimestamp(3, Timestamp.valueOf(p.getDataPagamento()));
-            stmt.setString(4, p.getStatus() == Pagamento.Status.APROVADO ? "Aprovado" : "Recusado");
+            stmt.setString(4, p.getStatus() == Pagamento.Status.APROVADO ? "Aprovado" : p.getStatus() == Pagamento.Status.RECUSADO ? "Recusado" : "Pendente");
             stmt.setString(5, p.getComprovante());
             stmt.setString(6, p.getNotaFiscal());
             stmt.setString(7, p.getCliente().getLogin());
