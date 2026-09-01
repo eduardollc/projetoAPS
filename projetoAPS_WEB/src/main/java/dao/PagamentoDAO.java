@@ -25,8 +25,20 @@ public class PagamentoDAO {
             stmt.setString(9, p.getNumeroCartao());
             stmt.setString(10, p.getDataValidade());
             stmt.setString(11, p.getCvv());
-        }
-        
+            
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao salvar pagamento: " + e.getMessage(), e);
+        }      
     }
+    
+    private String formatarEnumBanco(Pagamento.FormaPagamento f) {
+            switch (f) {
+                case PIX: return "Pix";
+                case DINHEIRO: return "Dinheiro";
+                case CARTAO: return "Cartão";
+                default: throw new IllegalArgumentException();
+            }
+        }
     
 }

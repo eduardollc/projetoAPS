@@ -14,7 +14,7 @@
                 Pagamento
             </h1>
         </div>
-        <form action="" method="post" id="form">
+        <form action="PagamentoController" method="post" id="form">
             <div id="input_container">
                 <div class="input-box">
                     <div id="infocompra">
