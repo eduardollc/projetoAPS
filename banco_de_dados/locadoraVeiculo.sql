@@ -4,7 +4,7 @@ USE locadoraVeiculo ;
 
 CREATE TABLE IF NOT EXISTS `Usuario` (
   `login` VARCHAR(250) NOT NULL,
-  `senha` VARCHAR(12) NOT NULL,
+  `senha` VARCHAR(8) NOT NULL,
   `nome` VARCHAR(250) NOT NULL,
   `cpf` CHAR(11) NOT NULL,
   PRIMARY KEY (`login`));
@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   `notaFiscal` VARCHAR(100) NOT NULL,
   `codCliente` CHAR(11) NOT NULL,
   `codFuncionario` CHAR(8) NOT NULL,
-  `numeroCartao` CHAR(16) NOT NULL,
-  `dataValidade` CHAR(4) NOT NULL,
-  `cvv` CHAR(4) NOT NULL,
+  `numeroCartao` CHAR(16),
+  `dataValidade` CHAR(4),
+  `cvv` CHAR(4),
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_Pagamento_Cliente1`
   FOREIGN KEY (`codCliente`)
@@ -56,12 +56,10 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   REFERENCES `Funcionario` (`login`));
   
   select * from usuario;
-  
-  -- pra testar como CLIENTE
+
 INSERT INTO cliente (cnh, telefone, email, situacaoFinanceira, login)
 VALUES ('12345678901', '77999998888', 'teste@email.com', 1, 'teste');
 
--- ou, pra testar como FUNCIONARIO, crie outro usuário base primeiro
 INSERT INTO usuario (login, senha, nome, cpf)
 VALUES ('func1', '123456', 'Funcionário Teste', '98765432100');
 

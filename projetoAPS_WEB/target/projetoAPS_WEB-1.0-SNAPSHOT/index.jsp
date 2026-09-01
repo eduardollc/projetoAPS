@@ -26,7 +26,7 @@
                 <div class="input-box">
                     <label for="password" class="form-label">Senha</label>
                     <div class="input-field">
-                        <input type="password" id="password" name="senha" class="form-control" placeholder="********" maxlength="12">
+                        <input type="password" id="password" name="senha" class="form-control" placeholder="********" maxlength="8" lenght="8">
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 </div>

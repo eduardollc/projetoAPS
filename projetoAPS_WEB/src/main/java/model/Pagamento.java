@@ -31,7 +31,7 @@ public class Pagamento {
    
 }
 
-    public Pagamento(int id, FormaPagamento formaPagamento, double valor, LocalDateTime dataPagamento, Status status, String comprovante, String notaFiscal, Cliente cliente, Funcionario funcionario) {
+    public Pagamento(int id, FormaPagamento formaPagamento, double valor, LocalDateTime dataPagamento, Status status, String comprovante, String notaFiscal, String numeroCartao, String cvv, String dataValidade, Cliente cliente, Funcionario funcionario) {
         this.id = id;
         this.formaPagamento = formaPagamento;
         this.valor = valor;
@@ -39,6 +39,9 @@ public class Pagamento {
         this.status = status;
         this.comprovante = comprovante;
         this.notaFiscal = notaFiscal;
+        this.numeroCartao = numeroCartao;
+        this.cvv = cvv;
+        this.dataValidade = dataValidade;
         this.cliente = cliente;
         this.funcionario = funcionario;
     }
@@ -102,6 +105,30 @@ public class Pagamento {
         this.notaFiscal = notaFiscal;
     }
 
+    public String getNumeroCartao() {
+        return numeroCartao;
+    }
+
+    public void setNumeroCartao(String numeroCartao) {
+        this.numeroCartao = numeroCartao;
+    }
+
+    public String getCvv() {
+        return cvv;
+    }
+
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
+    }
+
+    public String getDataValidade() {
+        return dataValidade;
+    }
+
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+
     public Cliente getCliente() {
         return cliente;
     }
@@ -117,6 +144,8 @@ public class Pagamento {
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
+
+    
     
     
     

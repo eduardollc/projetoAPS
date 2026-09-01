@@ -60,14 +60,14 @@
                 <div class="input-box">
                     <label for="senha" class="form-label">Senha</label>
                     <div class="input-field">
-                        <input type="password" id="senha" name="senha" class="form-control" placeholder="********" maxlength="12">
+                        <input type="password" id="senha" name="senha" class="form-control" placeholder="********" maxlength="8" lenght="8">
                         <i class="fa-solid fa-eye-slash pass"></i>
                     </div>
                 </div>
                 <div class="input-box">
                     <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
                     <div class="input-field">
-                        <input type="password" id="confirmar-senha" name="confirmar-senha" class="form-control" placeholder="********" maxlength="12">
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" class="form-control" placeholder="********" maxlength="8" lenght="8">
                         <i class="fa-solid fa-eye-slash pass"></i>
                     </div>
                 </div>
