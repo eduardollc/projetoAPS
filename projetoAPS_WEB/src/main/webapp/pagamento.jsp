@@ -41,9 +41,9 @@
                 </div>
             </div>
             <button type="submit" class="btn-default">
-                <a id="a" href="">  
+      
                     Confirmar Pagamento
-                </a>
+                
             </button>
         </form>
     </main>
