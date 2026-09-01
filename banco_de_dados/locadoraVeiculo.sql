@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   `formaPagamento` ENUM('Pix', 'Dinheiro', 'Cartão') NOT NULL,
   `valor` DECIMAL NOT NULL,
   `dataPagamento` DATETIME NOT NULL,
-  `status` ENUM('Aprovado', 'Recusado') NOT NULL,
+  `status` ENUM('Aprovado','Pendente', 'Recusado') NOT NULL,
   `comprovante` VARCHAR(100) NOT NULL,
   `notaFiscal` VARCHAR(100) NOT NULL,
   `codCliente` CHAR(11) NOT NULL,
@@ -66,3 +66,4 @@ VALUES ('func1', '123456', 'Funcionário Teste', '98765432100');
 INSERT INTO funcionario (matricula, cargo, login)
 VALUES ('F0000001', 'Atendente', 'func1');
 
+select * from pagamento;

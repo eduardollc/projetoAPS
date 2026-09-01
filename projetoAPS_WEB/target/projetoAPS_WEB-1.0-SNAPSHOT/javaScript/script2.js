@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) fecharModal();
     });
 
-    // Botão "Confirmar" do modal de Cartão agora só FECHA o modal
-    // (serve como "ok, revisei meus dados"). O envio de verdade só
+
     // acontece quando o cliente clicar no botão principal do formulário.
     const modalConfirm = document.getElementById('modal-confirm');
     if (modalConfirm) {
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ponto único de confirmação: o submit do formulário principal
     // ("Confirmar Pagamento"). Interceptamos o submit padrão (que
     // recarregaria a página) e enviamos via fetch em vez disso.
     form.addEventListener('submit', (e) => {
