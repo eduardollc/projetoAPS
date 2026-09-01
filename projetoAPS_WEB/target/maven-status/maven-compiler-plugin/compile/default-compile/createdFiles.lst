@@ -1,3 +1,4 @@
+dao\PagamentoDAO$1.class
 dao\FuncionarioDAO.class
 model\Funcionario.class
 controller\CadastroController.class
@@ -9,6 +10,8 @@ controller\UsuarioController.class
 model\Cliente.class
 com\mycompany\projetoaps_web\JakartaRestConfiguration.class
 dao\ClienteDAO.class
+dao\PagamentoDAO.class
 dao\UsuarioDAO.class
+controller\PagamentoController.class
 model\Pagamento.class
 service\ConnectionBD.class
