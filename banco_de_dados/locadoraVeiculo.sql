@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `Pagamento` (
   `comprovante` VARCHAR(100) NOT NULL,
   `notaFiscal` VARCHAR(100) NOT NULL,
   `codCliente` CHAR(11) NOT NULL,
-  `codFuncionario` CHAR(8) NOT NULL,
+  `codFuncionario` CHAR(8),
   `numeroCartao` CHAR(16),
   `dataValidade` CHAR(4),
   `cvv` CHAR(4),
@@ -65,3 +65,4 @@ VALUES ('func1', '123456', 'Funcionário Teste', '98765432100');
 
 INSERT INTO funcionario (matricula, cargo, login)
 VALUES ('F0000001', 'Atendente', 'func1');
+

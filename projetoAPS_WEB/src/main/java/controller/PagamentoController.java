@@ -34,8 +34,15 @@ public class PagamentoController extends HttpServlet{
             p.setDataValidade(req.getParameter("validadeCartao"));
             p.setCvv(req.getParameter("cvvCartao"));
         }
+        
+        try {
+            new PagamentoDAO().salvar(p);
+            // fetch() só olha se a resposta teve status ok
+            resp.setStatus(HttpServletResponse.SC_OK);
+        } catch(RuntimeException e) {
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
 
-        new PagamentoDAO().salvar(p);
         
     }
     
